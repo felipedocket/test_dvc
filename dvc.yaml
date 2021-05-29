@@ -12,6 +12,8 @@ stages:
     deps:
     - data/prepared/train.csv
     - src/train.py
+    params:
+    - train.max_iter
     outs:
     - model/model.joblib
   evaluate:

@@ -1,2 +1,2 @@
 train:
-  max_iter: 10
+  max_iter: 16
