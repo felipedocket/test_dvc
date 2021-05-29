@@ -29,21 +29,21 @@ stages:
     params:
       params.yaml:
         train.max_iter: 25
-        train.tol: 0.002
+        train.tol: 0.005
     outs:
     - path: model/model.joblib
-      md5: 662a3a06433e08fb31021de097bd260d
+      md5: 15d3c23178399fcc4dfad1c8c7675ce5
       size: 241222
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - path: model/model.joblib
-      md5: 662a3a06433e08fb31021de097bd260d
+      md5: 15d3c23178399fcc4dfad1c8c7675ce5
       size: 241222
     - path: src/evaluate.py
       md5: b197277667d6269271fff4ae4af8a941
       size: 645
     outs:
     - path: metrics/accuracy.json
-      md5: dc6b94482378c28884fa3ce829ea1221
+      md5: 8598e37deacf3dc4ea86db4bfbfa06d4
       size: 32
