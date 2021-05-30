@@ -1,2 +1,7 @@
 train:
+<<<<<<< HEAD
   max_iter: 16
+=======
+  max_iter: 42
+  tol: 0.006
+>>>>>>> baseline

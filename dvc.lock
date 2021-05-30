@@ -24,6 +24,7 @@ stages:
       md5: 40d916ad7f64820602c7ffa40c1de560
       size: 187615
     - path: src/train.py
+<<<<<<< HEAD
       md5: 7373ee6819a550f19725792f8ae4e7fa
       size: 1450
     params:
@@ -32,17 +33,36 @@ stages:
     outs:
     - path: model/model.joblib
       md5: be0dbae261bfbdd765319b915c2b7054
+=======
+      md5: 2c2b4f157d530e3412491cd710c33cd8
+      size: 1425
+    params:
+      params.yaml:
+        train.max_iter: 42
+        train.tol: 0.006
+    outs:
+    - path: model/model.joblib
+      md5: e41f909296531ed33c68d81188d40478
+>>>>>>> baseline
       size: 241222
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - path: model/model.joblib
+<<<<<<< HEAD
       md5: be0dbae261bfbdd765319b915c2b7054
+=======
+      md5: e41f909296531ed33c68d81188d40478
+>>>>>>> baseline
       size: 241222
     - path: src/evaluate.py
       md5: b197277667d6269271fff4ae4af8a941
       size: 645
     outs:
     - path: metrics/accuracy.json
+<<<<<<< HEAD
       md5: 4ea94a6ad52ff19f61dc2fa677279bd5
+=======
+      md5: ac62bfab736ab1180b286828002b7eb6
+>>>>>>> baseline
       size: 32

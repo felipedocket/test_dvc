@@ -14,6 +14,10 @@ stages:
     - src/train.py
     params:
     - train.max_iter
+<<<<<<< HEAD
+=======
+    - train.tol
+>>>>>>> baseline
     outs:
     - model/model.joblib
   evaluate:
